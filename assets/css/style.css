@@ -1,0 +1,329 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+/*---INDEX---*/
+nav {
+    background-color: rgb(80, 67, 33);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+.bodyGeneral { 
+    background-color: rgb(8, 8, 8);
+}
+.titulo { 
+    color: rgb(255, 255, 255);
+    font-family: 'Allura', cursive;
+    font-size: 80px;
+    align-content: flex-start;
+    display: flex;
+    padding: 17px;
+    
+}
+.logo-contenedor {
+    display: flex;
+    flex-direction: row;
+    gap: 0 15px;
+    align-items: center;
+    padding: 10px;
+
+}
+nav li a {
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+    padding: 20px;
+    font-size: 22px;
+}
+nav li a:hover {
+    font-weight: bold;
+    color: rgb(223, 166, 11);
+
+}
+.logo { 
+    width: 100px;
+    padding: 20px;
+    transition: 1s;
+}
+.logo:nth-child(1):hover {
+    transform: rotatey(180deg);
+
+}
+.contenidoPrincipal {
+    height: 800px; 
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    
+}
+.inicio { 
+    margin-top: 30px;
+    
+}
+
+.cocinaNikkei {
+    background-color: rgb(219, 158, 77);
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+}
+.descripCocinaNikkei {
+    font-family: 'Annie Use Your Telescope', cursive;
+    color: aliceblue;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    padding: 40px;
+    font-size: 30px;
+    
+}
+.nikkei {
+    width: 500px;
+    height: 600px;
+    margin-top: 50px;
+    margin-left: 200px;
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow: 0px 0px 30px 1px rgba(196,100,30,0.47);
+    -webkit-box-shadow: 0px 0px 30px 1px rgba(196,100,30,0.47);
+    -moz-box-shadow: 0px 0px 30px 1px rgba(196,100,30,0.47);
+    
+}
+.nikkei:nth-child(2):hover{
+    transform: scale(1.1);
+}
+
+ /*grilla INDEX*/
+.grillaPrincipal {
+    display: grid;
+    grid-template-columns: 800px 300px;
+    grid-template-rows: 700px 300px;
+    gap: 0px 0px;
+    padding: 10px;
+    justify-content: center;
+    grid-template-areas: 
+        "cuadrado vertical"
+        "horizontal horizontal"
+}
+
+.cuadrado { 
+    grid-area: cuadrado;
+    margin: 10px;
+    
+}
+.horizontal { 
+    grid-area: horizontal;
+    margin: 10px;
+}
+.vertical { 
+    grid-area: vertical;
+    margin: 10px;
+}
+
+.fotoCuadrado {
+    height: 100%;
+    width: 100%;
+}
+  
+.fotoVertical {
+    height: 100%;
+    width: 100%;
+}
+.fotoHorizontal{
+    height: 100%;
+    width: 100%;
+}
+
+   /*---MENU---*/
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+.tarjeta {
+    border: 2px solid; 
+    color: rgb(185, 125, 69);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 350px;
+    height: 550px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    transition: 1s;
+
+}
+.tarjeta:nth-child(1):hover{
+    transform: scale(1.1);
+}
+.tarjeta:nth-child(2):hover{
+    transform: scale(1.1);
+}
+.tarjeta:nth-child(3):hover{
+    transform: scale(1.1);
+}
+.tarjeta:nth-child(4):hover{
+    transform: scale(1.1);
+}
+.tarjeta:nth-child(5):hover{
+    transform: scale(1.1);
+}
+.tarjeta:nth-child(6):hover{
+    transform: scale(1.1);
+}
+.tarjeta:nth-child(7):hover{
+    transform: scale(1.1);
+}
+.tarjeta:nth-child(8):hover{
+    transform: scale(1.1);
+}
+
+.tarjeta__img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+}
+.tarjeta__titulo {
+    padding: 10px;
+}
+.tarjeta__descuento {
+    padding: 10px;
+}
+.btnTarjetas{
+    padding: 10px 20px;
+    background-color:rgb(129, 65, 32);
+    color:rgb(247, 244, 242);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    }
+
+   /*---CONTACTO---*/
+.formulario {
+    color: aliceblue;
+    font-family: 'Pattaya', sans-serif;
+    font-size: 35px;
+    padding: 50px;
+    text-align: center;
+}
+.campoformulario {
+    box-sizing: border-box;
+    width: 700px;
+    color: rgb(189, 142, 57);
+    text-align: center;
+    font-size: 25px;
+    padding: 70px;
+    background: rgb(34, 33, 29);
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 200px;
+    border-radius: 10px ;
+    border: 3px solid rgb(189, 142, 57) ;
+}
+
+#btnForm {
+    width: 100px;
+    height: 60px;
+}
+
+   /*---NOSOTROS---*/
+.grillaNosotros {
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "quienesSomos quienesSomos"
+      "mision producto"; 
+  }
+
+  .quienesSomos { 
+    grid-area: quienesSomos; 
+    width: 1000px;
+    margin: auto;
+}
+  .mision { grid-area: mision; }
+  .producto { grid-area: producto; }
+
+
+.somos { 
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    color: aliceblue;
+    line-height: 30px;
+    padding: 50px;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: rgb(48, 36, 24);
+    text-align: center;
+    justify-content: center;
+}
+
+.footerNosotros{
+    padding: 20px;
+    background-color: rgb(19, 17, 16);
+    color:aliceblue;
+    margin-top: 100px;
+}
+
+    /*---UBICACION---*/
+.footerUbicacion {
+    padding: 20px;
+    background-color: rgb(19, 17, 16);
+    color:aliceblue;
+    margin-top: 200px;
+}
+.img__mapa {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+.encontranos {
+    background-color: rgb(219, 158, 77);
+    color: black;
+    font-family: 'Allura', cursive;
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.dondeestamos {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Allura', cursive;
+    color: aliceblue;
+    text-align: center;
+    height: 500px;
+    padding: 100px;
+    font-size: 35px;
+    justify-content: center;
+}
+.leyenda {
+    width: 300px;
+    margin-right: 20px;
+    text-align: start;
+}
+
+.footer { 
+    padding: 20px;
+    background-color: rgb(19, 17, 16);
+    color:aliceblue;
+    margin-top: 100px;
+}
+.redes {
+    align-items: flex-end;
+}
+

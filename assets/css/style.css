@@ -8,14 +8,38 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    width: 100vw;
     
+}
+.fa-bars {
+    color: black;
+    font-size: 40px;
+    padding: 20px;
+    visibility: hidden;
 }
 nav ul {
     list-style-type: none;
     display: flex;
 }
+@media (max-width:911px){
+    nav ul {
+        position: fixed;
+        top: 0; 
+        left: -250px;
+        flex-direction: column; 
+        background-color:  rgb(80, 67, 33);
+        width: 250px;
+        height: 100vh;
+        transition: 0.3s;
+    
+     }
+}
+
 .bodyGeneral { 
     background-color: rgb(8, 8, 8);
+    width: 100%;
 }
 .titulo { 
     color: rgb(255, 255, 255);
@@ -55,7 +79,7 @@ nav li a:hover {
 
 }
 .contenidoPrincipal {
-    height: 800px; 
+    height: auto; 
     display: flex;
     justify-content: center;
     padding: 60px;
@@ -78,14 +102,15 @@ nav li a:hover {
     color: aliceblue;
     text-align: center;
     width: 500px;
-    height: 300px;
+    height: auto;
     padding: 40px;
     font-size: 30px;
+    flex-wrap: wrap;
     
 }
 .nikkei {
     width: 500px;
-    height: 600px;
+    height: auto;
     margin-top: 50px;
     margin-left: 200px;
     border-radius: 10px;
@@ -111,6 +136,21 @@ nav li a:hover {
         "cuadrado vertical"
         "horizontal horizontal"
 }
+/*@media (max-width:600px){
+    .grillaPrincipal{
+        box-shadow: none;
+        grid-template-rows: 700px 300px;
+        grid-template-areas: 
+        "cuadrado vertical"
+        "horizontal horizontal"
+    }
+
+    .nikkei {
+        width: 300px;
+        height: ;
+    }
+}
+*/
 
 .cuadrado { 
     grid-area: cuadrado;
@@ -219,15 +259,13 @@ nav li a:hover {
 }
 .campoformulario {
     box-sizing: border-box;
-    width: 700px;
+    width: 50%;
     color: rgb(189, 142, 57);
     text-align: center;
     font-size: 25px;
     padding: 70px;
     background: rgb(34, 33, 29);
     margin: auto;
-    margin-top: 30px;
-    margin-bottom: 200px;
     border-radius: 10px ;
     border: 3px solid rgb(189, 142, 57) ;
 }
@@ -240,7 +278,7 @@ nav li a:hover {
    /*---NOSOTROS---*/
 .grillaNosotros {
     display: grid;
-    grid-auto-columns: 1fr; 
+    /*grid-auto-columns: 1fr;*/
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr; 
     gap: 0px 0px; 
@@ -248,11 +286,20 @@ nav li a:hover {
       "quienesSomos quienesSomos"
       "mision producto"; 
   }
+ @media (max-width:600px){
+    .grillaNosotros{
+        box-shadow: none;
+        grid-template-areas: 
+        "quienesSomos quienesSomos"
+        "mision producto"; 
+    }
+}
 
   .quienesSomos { 
     grid-area: quienesSomos; 
     width: 1000px;
     margin: auto;
+    
 }
   .mision { grid-area: mision; }
   .producto { grid-area: producto; }
@@ -269,7 +316,9 @@ nav li a:hover {
     background-color: rgb(48, 36, 24);
     text-align: center;
     justify-content: center;
+    overflow: auto;
 }
+
 
 .footerNosotros{
     padding: 20px;

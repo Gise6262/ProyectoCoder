@@ -2,92 +2,31 @@
     margin: 0;
     padding: 0;
 }
+main {
+    overflow: hidden;
+}
 /*---INDEX---*/
-nav {
-    background-color: rgb(80, 67, 33);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    list-style-type: none;
-    width: 100vw;
-    
-}
-.fa-bars {
-    color: black;
-    font-size: 40px;
-    padding: 20px;
-    visibility: hidden;
-}
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-@media (max-width:911px){
-    nav ul {
-        position: fixed;
-        top: 0; 
-        left: -250px;
-        flex-direction: column; 
-        background-color:  rgb(80, 67, 33);
-        width: 250px;
-        height: 100vh;
-        transition: 0.3s;
-    
-     }
+.nav-link{
+    font-size: 22px;
 }
 
 .bodyGeneral { 
     background-color: rgb(8, 8, 8);
     width: 100%;
 }
-.titulo { 
+ .navbar-brand { 
     color: rgb(255, 255, 255);
     font-family: 'Allura', cursive;
     font-size: 80px;
     align-content: flex-start;
-    display: flex;
-    padding: 17px;
-    
-}
-.logo-contenedor {
-    display: flex;
-    flex-direction: row;
-    gap: 0 15px;
-    align-items: center;
-    padding: 10px;
-
-}
-nav li a {
-    text-decoration: none;
-    color: rgb(219, 219, 219);
-    padding: 20px;
-    font-size: 22px;
-}
-nav li a:hover {
-    font-weight: bold;
-    color: rgb(223, 166, 11);
-
-}
-.logo { 
-    width: 100px;
-    padding: 20px;
-    transition: 1s;
-}
-.logo:nth-child(1):hover {
-    transform: rotatey(180deg);
-
-}
+    padding: 17px; 
+} 
 .contenidoPrincipal {
     height: auto; 
     display: flex;
     justify-content: center;
     padding: 60px;
-    
-}
-.inicio { 
-    margin-top: 30px;
-    
+    align-items: center;
 }
 
 .cocinaNikkei {
@@ -112,7 +51,7 @@ nav li a:hover {
     width: 500px;
     height: auto;
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 200px; 
     border-radius: 10px;
     transition: 1s;
     box-shadow: 0px 0px 30px 1px rgba(196,100,30,0.47);
@@ -136,22 +75,6 @@ nav li a:hover {
         "cuadrado vertical"
         "horizontal horizontal"
 }
-/*@media (max-width:600px){
-    .grillaPrincipal{
-        box-shadow: none;
-        grid-template-rows: 700px 300px;
-        grid-template-areas: 
-        "cuadrado vertical"
-        "horizontal horizontal"
-    }
-
-    .nikkei {
-        width: 300px;
-        height: ;
-    }
-}
-*/
-
 .cuadrado { 
     grid-area: cuadrado;
     margin: 10px;
@@ -254,7 +177,7 @@ nav li a:hover {
     color: aliceblue;
     font-family: 'Pattaya', sans-serif;
     font-size: 35px;
-    padding: 50px;
+    padding: 10px;
     text-align: center;
 }
 .campoformulario {
@@ -263,12 +186,13 @@ nav li a:hover {
     color: rgb(189, 142, 57);
     text-align: center;
     font-size: 25px;
-    padding: 70px;
+    padding: 20px;
     background: rgb(34, 33, 29);
     margin: auto;
     border-radius: 10px ;
     border: 3px solid rgb(189, 142, 57) ;
 }
+
 
 #btnForm {
     width: 100px;
@@ -286,18 +210,9 @@ nav li a:hover {
       "quienesSomos quienesSomos"
       "mision producto"; 
   }
- @media (max-width:600px){
-    .grillaNosotros{
-        box-shadow: none;
-        grid-template-areas: 
-        "quienesSomos quienesSomos"
-        "mision producto"; 
-    }
-}
 
   .quienesSomos { 
     grid-area: quienesSomos; 
-    width: 1000px;
     margin: auto;
     
 }
@@ -360,12 +275,6 @@ nav li a:hover {
     font-size: 35px;
     justify-content: center;
 }
-.leyenda {
-    width: 300px;
-    margin-right: 20px;
-    text-align: start;
-}
-
 .footer { 
     padding: 20px;
     background-color: rgb(19, 17, 16);
@@ -375,4 +284,52 @@ nav li a:hover {
 .redes {
     align-items: flex-end;
 }
+@media (max-width: 412px){
+    .campoformulario{
+        width: 80%;
+        box-sizing: border-box;
+        color: rgb(189, 142, 57);
+        text-align: center;
+        font-size: 25px;
+        padding: 20px;
+        background: rgb(34, 33, 29);
+        margin: auto;
+        border-radius: 10px ;
+        border: 3px solid rgb(189, 142, 57) ;
+    }
+}
 
+
+@media (max-width:700px){
+    .grillaNosotros{
+        box-shadow: none;
+        display: contents;
+        grid-template-areas: 
+        "quienesSomos quienesSomos"
+        "mision producto"; 
+    }
+}
+@media (max-width:900px){
+    .contenidoPrincipal{
+        display: contents; 
+        margin: auto;
+    }
+    .dondeestamos{
+        display: contents;
+    }
+}
+@media (max-width:1200px) {
+    .nikkei{
+        margin-left: 90px;
+    }
+  }
+  @media (max-width:600px){
+    .grillaPrincipal{
+        display: contents;
+        box-shadow: none;
+        grid-template-rows: 700px 300px;
+        grid-template-areas: 
+        "cuadrado vertical"
+        "horizontal horizontal"
+    }
+}

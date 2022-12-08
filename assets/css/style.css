@@ -76,6 +76,7 @@ main {
   grid-template-rows: 700px 300px;
   gap: 0px 0px;
   padding: 10px;
+  transition: 1s;
   justify-content: center;
   grid-template-areas: "cuadrado vertical" "horizontal horizontal";
 }
@@ -102,6 +103,18 @@ main {
 .grillaPrincipal .fotoHorizontal {
   height: 100%;
   width: 100%;
+}
+
+.cuadrado:nth-child(1):hover {
+  transform: scale(1.1);
+}
+
+.vertical:nth-child(2):hover {
+  transform: scale(1.1);
+}
+
+.horizontal:nth-child(3):hover {
+  transform: scale(1.1);
 }
 
 /*---MENU---*/
@@ -250,13 +263,6 @@ main {
     grid-template-areas: "quienesSomos quienesSomos" "mision producto";
   }
 }
-.footerNosotros {
-  padding: 20px;
-  background-color: rgb(19, 17, 16);
-  color: aliceblue;
-  margin-top: 100px;
-}
-
 /*---UBICACION---*/
 .footerUbicacion {
   padding: 60px;
@@ -304,6 +310,26 @@ main {
 .dondeestamos .direccion {
   text-align: center;
   padding: 40px;
+}
+
+.parrafo {
+  background-color: rgb(100, 69, 27);
+}
+
+.parrafo {
+  background-color: rgb(155, 76, 1);
+}
+
+.parrafo {
+  background-color: rgb(100, 69, 27);
+}
+
+.parrafo {
+  background-color: rgb(100, 69, 27);
+}
+
+.parrafo {
+  background-color: rgb(100, 69, 27);
 }
 
 .footer {

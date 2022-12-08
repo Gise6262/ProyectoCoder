@@ -13,7 +13,6 @@ main {
 .nav-link{
     font-size: 22px;
 }
-
  .navbar-brand { 
     color: rgb(255, 255, 255);
     font-family: 'Allura', cursive;
@@ -73,15 +72,14 @@ main {
     grid-template-rows: 700px 300px;
     gap: 0px 0px;
     padding: 10px;
+    transition: 1s;
     justify-content: center;
     grid-template-areas: 
         "cuadrado vertical"
         "horizontal horizontal";
-    
         .cuadrado { 
             grid-area: cuadrado;
             margin: 10px;
-            
         }
         .horizontal { 
             grid-area: horizontal;
@@ -91,12 +89,10 @@ main {
             grid-area: vertical;
             margin: 10px;
         }
-        
         .fotoCuadrado {
             height: 100%;
             width: 100%;
         }
-          
         .fotoVertical {
             height: 100%;
             width: 100%;
@@ -105,7 +101,16 @@ main {
             height: 100%;
             width: 100%;
         }
-}
+    }
+    .cuadrado:nth-child(1):hover{
+        transform: scale(1.1);
+    }
+    .vertical:nth-child(2):hover{
+        transform: scale(1.1);
+    }
+    .horizontal:nth-child(3):hover{
+        transform: scale(1.1);
+    }
 
    /*---MENU---*/
 .tarjetas {
@@ -115,7 +120,6 @@ main {
     justify-content: center;
     text-align: center;
     padding: 40px;
-    
     .tarjeta {
         border: 2px solid; 
         color: rgb(185, 125, 69);
@@ -242,7 +246,6 @@ main {
          justify-content: center;
          overflow: auto;
      }
-    
   }
   @media (max-width:700px){
     .grillaNosotros{
@@ -253,13 +256,6 @@ main {
         "mision producto"; 
     }
 }
-.footerNosotros{
-    padding: 20px;
-    background-color: rgb(19, 17, 16);
-    color:aliceblue;
-    margin-top: 100px;
-}
-
     /*---UBICACION---*/
 .footerUbicacion {
         padding: 60px;
@@ -269,7 +265,6 @@ main {
         font-size: 20px;
         text-align: center;
     }
-
 .encontranos {
     background-color: rgb(219, 158, 77);
     color: black;
@@ -307,7 +302,19 @@ main {
         padding: 40px;
     }
 }
+@for $var from 1 to 6 {
 
+    @if $var == 2 {
+        .parrafo{
+            background-color: rgb(155, 76, 1);
+        }
+    }
+    @else{
+        .parrafo{
+            background-color: rgb(100, 69, 27);
+        }
+    }
+}
 .footer { 
     padding: 60px;
     background-color: rgb(19, 17, 16);
@@ -328,7 +335,6 @@ main {
         display: contents;
     }
 }
-
 @media (max-width:600px){
     .grillaPrincipal{
         display: contents;

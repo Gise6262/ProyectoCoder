@@ -19,6 +19,11 @@ main {
     font-size: 80px;
     align-content: flex-start;
     padding: 17px; 
+    .navbar-toggler-icon {
+        font-size: 40px;
+        background-color: rgb(247, 204, 152);
+        
+      }
 } 
 .contenidoPrincipal {
     height: auto; 
@@ -48,7 +53,7 @@ main {
         width: 500px;
         height: auto;
         margin-top: 50px;
-        margin-left: 200px; 
+        margin-left: 100px; 
         border-radius: 10px;
         transition: 1s;
         box-shadow: 0px 0px 30px 1px rgba(196,100,30,0.47);
@@ -58,9 +63,9 @@ main {
     .nikkei:nth-child(2):hover{
         transform: scale(1.1);
     }
-    @media (max-width:1200px) {
+    @media (max-width:1000px) {
         .nikkei{
-            margin-left: 90px;
+            margin-right: 90px;
         }
       }
 }
@@ -72,7 +77,6 @@ main {
     grid-template-rows: 700px 300px;
     gap: 0px 0px;
     padding: 10px;
-    transition: 1s;
     justify-content: center;
     grid-template-areas: 
         "cuadrado vertical"
@@ -101,15 +105,6 @@ main {
             height: 100%;
             width: 100%;
         }
-    }
-    .cuadrado:nth-child(1):hover{
-        transform: scale(1.1);
-    }
-    .vertical:nth-child(2):hover{
-        transform: scale(1.1);
-    }
-    .horizontal:nth-child(3):hover{
-        transform: scale(1.1);
     }
 
    /*---MENU---*/
@@ -201,19 +196,20 @@ main {
         width: 100px;
         height: 60px;
     }
-    @media (max-width: 412px){
-        .campoformulario{
-            width: 80%;
+    @media (max-width:500px){
+        .campoformulario {
+            width: 100%;
+            height: 100%;
             box-sizing: border-box;
-            color: rgb(189, 142, 57);
+            color: rgb(138, 104, 43);
             text-align: center;
-            font-size: 25px;
-            padding: 20px;
+            font-size: 20px;
+            padding: 5px;
             background: rgb(34, 33, 29);
             margin: auto;
-            border-radius: 10px ;
-            border: 3px solid rgb(189, 142, 57) ;
-        }
+            border-radius: 10px;
+            border: 3px solid rgb(189, 142, 57);
+          }
     }
 }
 
@@ -326,16 +322,18 @@ main {
         align-items: flex-end;
     }
 }
-@media (max-width:900px){
-    .contenidoPrincipal{
-        display: contents; 
-        margin: auto;
+@media (max-width: 1200px) {
+    .contenidoPrincipal {
+      display: contents;
+      margin: auto;
     }
-    .dondeestamos{
-        display: contents;
+  }
+@media (max-width: 1000px) {
+    .dondeestamos {
+      display: contents;
     }
-}
-@media (max-width:600px){
+  }
+@media (max-width:700px){
     .grillaPrincipal{
         display: contents;
         box-shadow: none;
@@ -344,4 +342,4 @@ main {
         "cuadrado vertical"
         "horizontal horizontal"
     }
-}
+  }

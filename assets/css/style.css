@@ -26,10 +26,8 @@ main {
 }
 .navbar-toggler-icon {
   font-size: 40px;
-  background-color: rgb(247, 204, 152);
-  
+  background-color: rgb(219, 158, 77);
 }
-
 .contenidoPrincipal {
   height: auto;
   display: flex;
@@ -43,6 +41,7 @@ main {
   font-size: 45px;
   font-weight: bolder;
   text-align: center;
+  padding: 10px;
 }
 .contenidoPrincipal .descripCocinaNikkei {
   font-family: "Annie Use Your Telescope", cursive;
@@ -51,15 +50,14 @@ main {
   width: auto;
   margin: auto;
   height: auto;
-  padding: 40px;
+  padding: 60px;
   font-size: 30px;
-  flex-wrap: wrap;
+  text-align: left;
 }
 .contenidoPrincipal .nikkei {
   width: 500px;
   height: auto;
-  margin-top: 50px;
-  margin-left: 100px;
+  margin: auto;
   border-radius: 10px;
   transition: 1s;
   box-shadow: 0px 0px 30px 1px rgba(196, 100, 30, 0.47);
@@ -71,7 +69,8 @@ main {
 }
 @media (max-width: 1000px) {
   .contenidoPrincipal .nikkei {
-    margin-right: 90px;
+    margin-bottom: 50px;
+    align-items: center;
   }
 }
 
@@ -80,6 +79,7 @@ main {
 /*grilla INDEX*/
 .grillaPrincipal {
   display: grid;
+  margin-top: 50px;
   grid-template-columns: 800px 300px;
   grid-template-rows: 700px 300px;
   gap: 0px 0px;
